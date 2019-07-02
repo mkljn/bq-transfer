@@ -21,17 +21,11 @@ runner: dataflow
 # [required] target: The target in format [PROJECT]:[DATASET] for dataset or [PROJECT]:[DATASET].[TABLE] for table
 copies:
 # Dataset copy
-- source: growwapi:backend_events
-  target: growwapi:backend_events_IN
-  numWorkers: 2
-  maxNumWorkers: 2
-  workerMachineType: n1-standard-2
-  writeDisposition: append
-  targetDatasetLocation: asia-south1
+
 
 # Table copy to EU
 - source: growwapi:backend_events.browsing_history_05_nov_2018
-  target: growwapi:backend_events_IN.browsing_history_05_nov_2018_IN
+  target: growwapi:backend_events_IN.browsing_history_05_nov_2018
   maxNumWorkers: 1
   workerMachineType: n1-standard-2
   writeDisposition: append
