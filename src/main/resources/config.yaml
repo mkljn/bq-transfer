@@ -30,12 +30,12 @@ copies:
   targetDatasetLocation: asia-south1
 
 # Table copy to EU
-#- source: bigquery-public-data:world_bank_wdi.country_series_definitions
-#  target: growwapi:world_bank_wdi_US.country_series_definitions
-#  maxNumWorkers: 1
-#  workerMachineType: n1-standard-2
-#  writeDisposition: append
-#  targetDatasetLocation: asia-south1
+- source: growwapi:backend_events.browsing_history_05_nov_2018
+  target: growwapi:backend_events_IN.browsing_history_05_nov_2018_IN
+  maxNumWorkers: 1
+  workerMachineType: n1-standard-2
+  writeDisposition: append
+  targetDatasetLocation: asia-south1
 
   # Table copy to US
 #- source: bigquery-public-data:world_bank_wdi.country_series_definitions
