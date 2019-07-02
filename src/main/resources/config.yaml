@@ -11,23 +11,32 @@ runner: dataflow
 # [optional] workerMachineType: The type of the workers. Default is n1-standard-1.
 # [optional] numWorkers: The initial number of workers in the Dataflow cluster. Default is 1.
 # [optional] maxNumWorkers: The max number of workers in the Dataflow cluster. Default is 3.
-targetDatasetLocation: IN
 # [optional] zone: The zone where Dataflow cluster will spin up. Default is australia-southeast1-a.
 # [optional] writeDisposition: Either truncate or append. Default is truncate.
-detectSchema: false
+#detectSchema: false
 # [optional] composite: Either true or false. If true, Dataflow runs all copies as 1 job/pipeline. If false, each copy
 #                       is run as as an independent Dataflow job/pipeline. Default is true.
 # [required] source: The source in format [PROJECT]:[DATASET] for dataset or [PROJECT]:[DATASET].[TABLE] for table
 # [required] target: The target in format [PROJECT]:[DATASET] for dataset or [PROJECT]:[DATASET].[TABLE] for table
 copies:
 # Dataset copy
-- source: growwapi:analytics_157643430.events_
-  target: growwapi:analytics_157643430.events_2
-  numWorkers: 2
-  maxNumWorkers: 2
+#- source: growwapi:analytics_157643430.events_
+#  target: growwapi:analytics_157643430.events_2
+#  numWorkers: 2
+#  maxNumWorkers: 2
+#  workerMachineType: n1-standard-2
+#  writeDisposition: append
+#  targetDatasetLocation: IN
+
+
+# Table copy to EU
+- source: bigquery-public-data:world_bank_wdi.country_series_definitions
+  target: growwapi:world_bank_wdi_US.country_series_definitions
+  maxNumWorkers: 1
   workerMachineType: n1-standard-2
   writeDisposition: append
   targetDatasetLocation: IN
+
 
 # Table copy to EU
 #- source: bigquery-public-data:world_bank_wdi.country_series_definitions
