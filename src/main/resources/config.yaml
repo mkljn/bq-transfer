@@ -11,7 +11,7 @@ runner: dataflow
 # [optional] workerMachineType: The type of the workers. Default is n1-standard-1.
 # [optional] numWorkers: The initial number of workers in the Dataflow cluster. Default is 1.
 # [optional] maxNumWorkers: The max number of workers in the Dataflow cluster. Default is 3.
-# [optional] targetDatasetLocation: If the target dataset in BigQuery does not exist, use this to specify the location.
+targetDatasetLocation: IN
 # [optional] zone: The zone where Dataflow cluster will spin up. Default is australia-southeast1-a.
 # [optional] writeDisposition: Either truncate or append. Default is truncate.
 detectSchema: false
@@ -22,7 +22,7 @@ detectSchema: false
 copies:
 # Dataset copy
 - source: growwapi:analytics_157643430.events_
-  target: growwapi:analytics_157643430.events_
+  target: growwapi:analytics_157643430.events_2
   numWorkers: 2
   maxNumWorkers: 2
   workerMachineType: n1-standard-2
