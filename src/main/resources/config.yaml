@@ -32,7 +32,7 @@ copies:
   maxNumWorkers: 1
   workerMachineType: n1-standard-2
   writeDisposition: append
-  targetDatasetLocation: US
+  targetDatasetLocation: IN
 
   # Table copy to US
 - source: bigquery-public-data:world_bank_wdi.country_series_definitions
