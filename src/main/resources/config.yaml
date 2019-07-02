@@ -21,23 +21,26 @@ runner: dataflow
 # [required] target: The target in format [PROJECT]:[DATASET] for dataset or [PROJECT]:[DATASET].[TABLE] for table
 copies:
 # Dataset copy
-#- source: bigquery-public-data:world_bank_wdi
-#  target: growwapi:world_bank_wdi
-#  numWorkers: 2
-#  maxNumWorkers: 2
-
-# Table copy to EU
-- source: bigquery-public-data:world_bank_wdi.country_series_definitions
-  target: growwapi:world_bank_wdi_US.country_series_definitions
-  maxNumWorkers: 1
+- source: growwapi:backend_events
+  target: growwapi:backend_events_IN
+  numWorkers: 2
+  maxNumWorkers: 2
   workerMachineType: n1-standard-2
   writeDisposition: append
   targetDatasetLocation: asia-south1
 
+# Table copy to EU
+#- source: bigquery-public-data:world_bank_wdi.country_series_definitions
+#  target: growwapi:world_bank_wdi_US.country_series_definitions
+#  maxNumWorkers: 1
+#  workerMachineType: n1-standard-2
+#  writeDisposition: append
+#  targetDatasetLocation: asia-south1
+
   # Table copy to US
-- source: bigquery-public-data:world_bank_wdi.country_series_definitions
-  target: growwapi:world_bank_wdi_EU.country_series_definitions
-  maxNumWorkers: 1
-  workerMachineType: n1-standard-2
-  writeDisposition: append
-  targetDatasetLocation: EU
+#- source: bigquery-public-data:world_bank_wdi.country_series_definitions
+ # target: growwapi:world_bank_wdi_EU.country_series_definitions
+  #maxNumWorkers: 1
+  #workerMachineType: n1-standard-2
+  #writeDisposition: append
+  #targetDatasetLocation: EU
