@@ -24,8 +24,8 @@ copies:
 
 
 # Table copy to EU
-- source: growwapi:backend_events.browsing_history_05_nov_2018
-  target: growwapi:backend_events_IN.browsing_history_05_nov_2018
+- source: growwapi:analytics_157643430.events_20190701
+  target: growwapi:analytics_157643430_IN.events_20190701_IN
   maxNumWorkers: 1
   workerMachineType: n1-standard-2
   writeDisposition: append
