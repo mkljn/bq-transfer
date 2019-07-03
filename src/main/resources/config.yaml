@@ -22,44 +22,25 @@ runner: dataflow
 
 copies:
 
-- source: growwapi:analytics_157643430.events_20190601
-  target: growwapi:analytics_157643430_IN.events_20190601
-  maxNumWorkers: 1
-  workerMachineType: n1-standard-2
- # writeDisposition: append
-  detectSchema: false
-  #targetDatasetLocation: asia-south1
-
-- source: growwapi:analytics_157643430.events_20190602
-  target: growwapi:analytics_157643430_IN.events_20190602
-  maxNumWorkers: 1
-  workerMachineType: n1-standard-2
- # writeDisposition: append
-  detectSchema: false
-  #targetDatasetLocation: asia-south1
-  
-- source: growwapi:analytics_157643430.events_20190603
-  target: growwapi:analytics_157643430_IN.events_20190603
-  maxNumWorkers: 1
-  workerMachineType: n1-standard-2
- # writeDisposition: append
-  detectSchema: false
-  #targetDatasetLocation: asia-south1
-
-- source: growwapi:analytics_157643430.events_20190604
-  target: growwapi:analytics_157643430_IN.events_20190604
-  maxNumWorkers: 1
-  workerMachineType: n1-standard-2
- # writeDisposition: append
-  detectSchema: false
-  #targetDatasetLocation: asia-south1
-
 - source: growwapi:analytics_157643430.events_20190605
   target: growwapi:analytics_157643430_IN.events_20190605
   maxNumWorkers: 1
   workerMachineType: n1-standard-2
- # writeDisposition: append
+  composite: false
   detectSchema: false
-  #targetDatasetLocation: asia-south1
+  
+- source: growwapi:analytics_157643430.events_20190606
+  target: growwapi:analytics_157643430_IN.events_20190606
+  maxNumWorkers: 1
+  workerMachineType: n1-standard-2
+  composite: false
+  detectSchema: false
+
+- source: growwapi:analytics_157643430.events_20190607
+  target: growwapi:analytics_157643430_IN.events_20190607
+  maxNumWorkers: 1
+  workerMachineType: n1-standard-2
+  composite: false
+  detectSchema: false
 
   
