@@ -30,7 +30,7 @@ copies:
   workerMachineType: n1-standard-2
   writeDisposition: append
   detectSchema: false
-  targetDatasetLocation: asia-south1
+  #targetDatasetLocation: asia-south1
 
   # Table copy to US
 #- source: bigquery-public-data:world_bank_wdi.country_series_definitions
