@@ -28,7 +28,7 @@ copies:
   target: growwapi:analytics_157643430_IN.events_20190701
   maxNumWorkers: 1
   workerMachineType: n1-standard-2
-  writeDisposition: append
+ # writeDisposition: append
   detectSchema: false
   #targetDatasetLocation: asia-south1
 
@@ -36,7 +36,7 @@ copies:
   target: growwapi:analytics_157643430_IN.events_20190702
   maxNumWorkers: 1
   workerMachineType: n1-standard-2
-  writeDisposition: append
+ # writeDisposition: append
   detectSchema: false
   #targetDatasetLocation: asia-south1
   
@@ -44,10 +44,9 @@ copies:
   target: growwapi:analytics_157643430_IN.events_20190630
   maxNumWorkers: 1
   workerMachineType: n1-standard-2
-  writeDisposition: append
+ # writeDisposition: append
   detectSchema: false
   #targetDatasetLocation: asia-south1
-  
 
   # Table copy to US
 #- source: bigquery-public-data:world_bank_wdi.country_series_definitions
