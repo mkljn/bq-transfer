@@ -25,12 +25,29 @@ copies:
 
 # Table copy to EU
 - source: growwapi:analytics_157643430.events_20190701
-  target: growwapi:analytics_157643430_IN.test
+  target: growwapi:analytics_157643430_IN.events_20190701
   maxNumWorkers: 1
   workerMachineType: n1-standard-2
   writeDisposition: append
   detectSchema: false
   #targetDatasetLocation: asia-south1
+
+- source: growwapi:analytics_157643430.events_20190702
+  target: growwapi:analytics_157643430_IN.events_20190702
+  maxNumWorkers: 1
+  workerMachineType: n1-standard-2
+  writeDisposition: append
+  detectSchema: false
+  #targetDatasetLocation: asia-south1
+  
+- source: growwapi:analytics_157643430.events_20190703
+  target: growwapi:analytics_157643430_IN.events_20190703
+  maxNumWorkers: 1
+  workerMachineType: n1-standard-2
+  writeDisposition: append
+  detectSchema: false
+  #targetDatasetLocation: asia-south1
+  
 
   # Table copy to US
 #- source: bigquery-public-data:world_bank_wdi.country_series_definitions
