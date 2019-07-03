@@ -40,8 +40,8 @@ copies:
   detectSchema: false
   #targetDatasetLocation: asia-south1
   
-- source: growwapi:analytics_157643430.events_20190703
-  target: growwapi:analytics_157643430_IN.events_20190703
+- source: growwapi:analytics_157643430.events_20190630
+  target: growwapi:analytics_157643430_IN.events_20190630
   maxNumWorkers: 1
   workerMachineType: n1-standard-2
   writeDisposition: append
